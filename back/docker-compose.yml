@@ -1,0 +1,19 @@
+version: '1'
+services:
+  api:
+    image: nowports-test
+    build: .
+    networks:
+      - backend
+    ports:
+      - "3000:3000"
+
+  web-cli:
+    image: nowports-test
+    networks:
+      - backend
+    command: sh
+
+networks:
+  backend:
+    driver: bridge
