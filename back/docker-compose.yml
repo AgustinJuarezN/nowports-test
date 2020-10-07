@@ -6,7 +6,7 @@ services:
     networks:
       - backend
     ports:
-      - "3000:3000"
+      - "3015:3015"
 
   web-cli:
     image: nowports-test
